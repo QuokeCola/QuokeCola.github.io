@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meta-Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link href="/ui_components/css_include.css" rel="stylesheet" type="text/css">
+    <link href="/ui_components/font/BlenderPro/BlenderPro.css"  rel="stylesheet" type="text/css">
+    <link href="/ui_components/font/NunitoSans/NunitoSans.css"  rel="stylesheet" type="text/css">
+    <link href="/ui_components/content-loader/css_include.css"  rel="stylesheet" type="text/css">
+    <link href="/ui_components/nav/css_include.css"  rel="stylesheet" type="text/css">
+    <base href="/Blog_2.0/">
+</head>
+<body style="margin: 0">
+<input type="checkbox" style="display: none" id="loading-status">
+<div id="content-screen" class="content-screen"></div>
+<div id="loading-screen">
+    <div id = "loading-textBox"><div class="loading-text"></div></div>
+    <div id = "loading-orgName"></div>
+    <div id = "loading-grid"></div>
+</div>
+<nav id="navigation-bar">
+    <input type="checkbox" style="display: none" id="nav-panel-status">
+    <label	id="nav-expand-btn"	class="nav-expand-btn"	for="nav-panel-status">
+				<span class="nav-expand-btn-bread nav-expand-btn-bread-top">
+					<span class="nav-expand-btn-line nav-expand-btn-line-top"></span>
+				</span>
+                <span class="nav-expand-btn-bread nav-expand-btn-bread-bottom">
+                    <span class="nav-expand-btn-line nav-expand-btn-line-bottom"></span>
+				</span>
+    </label>
+    <div class="nav-logoPanel" id="nav-logoPanel">QuokeCola</div>
+    <div class="nav-menuPanel" id ="nav-menuPanel"></div>
+</nav>
+<script src="/ui_components/nav/javascript_include.js"></script>
+<script src="/ui_components/content-loader/javascript_include.js"></script>
+<script src="/ui_components/website_controller.js"></script>
+<script>let WebsiteController = new website_controller("/website-config.json");</script>
+</body>
+</html>

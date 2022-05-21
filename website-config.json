@@ -1,0 +1,19 @@
+{
+  "title": "Meta-Team",
+  "logo": "",
+  "organization": "ZJUI Meta-Team<br>Zhejiang University-University of Illinois at Urbana-Champaign Institute",
+  "links": [
+    {
+      "title": "HOME",
+      "src": "/resources/home/home.html"
+    },
+    {
+      "title": "ARTICLES",
+      "src": "/resources/infantry/infantry.html"
+    },
+    {
+      "title": "WEBSERVICE",
+      "src": "hero"
+    }
+  ]
+}

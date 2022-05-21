@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import url("/ui_components/font/BlenderPro/BlenderPro.css");
+@import url("/ui_components/font/NunitoSans/NunitoSans.css");
+@import url("/ui_components/content-loader/css_include.css");
+@import url("/ui_components/nav/css_include.css");
+
+html, body{ width: 100% ; height: 100%; position: fixed; font-family: Blender Pro, serif; background-color: white;overflow: hidden; display: flex;}
+
+:root{
+    --rm-blue: rgb(62,145,247);
+    --rm-yellow-darken: rgb(72,58,27);
+    --rm-yellow: rgba(245,193,66);
+
+    --loading-grid-dark:rgb(100,100,100);
+    --loading-grid-red:rgb(255,200,200);
+}
+
+flex-break{
+    width: 100%;
+    height: 0;
+}
