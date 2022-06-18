@@ -90,23 +90,6 @@ nav .menu-items:hover::after{
     transition: all 0.5s cubic-bezier(0.8,0.0,0.2,1.0);
 }
 
-/**Just a joke :D*/
-.nav-langSwitchBtn:hover::before{
-    content: "No Chinese translation yet. You need to learn English!";
-    border: rgba(255,255,255,0.2) 1px solid;
-    text-align: right;
-    font-size: 10px;
-    color: white;
-    position: absolute;
-    right: 0;
-    bottom: -90px;
-    width: 320%;
-    border-radius: 5px;
-    padding: 10px;
-    backdrop-filter: blur(20px) brightness(50%);
-    -webkit-backdrop-filter: blur(20px) brightness(50%);
-}
-
 /*Layout for PC*/
 @media screen and (min-width: 700px) {
     nav{
@@ -148,8 +131,8 @@ nav .menu-items:hover::after{
         justify-content: center;
 
         flex-wrap: wrap;
-        backdrop-filter: blur(20px) brightness(50%);
-        -webkit-backdrop-filter: blur(20px) brightness(50%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     /********************************************//**
@@ -187,9 +170,9 @@ nav .menu-items:hover::after{
         display: block;
         left: 5%;
         width: 90%;
-        height: 3px;
-        background: #fff;
-        border-radius: 1.5px;
+        height: 2px;
+        background: rgba(0,0,0,1.0);
+        border-radius: 1px;
         position: absolute;
 
         -webkit-transition: transform 0.4s 0.25s cubic-bezier(0.2,0.5,0.2,1.0);
