@@ -11,19 +11,75 @@
 
     <link href="/resources/home/css_include.css" rel="stylesheet" type="text/css">
     <link href="/resources/home/modules.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body style="margin: 0">
 <div id="content-screen" class="content-screen">
 <!--    Write your HTML here.-->
-    <div class="banner-wrapper" >
-        <div class="banner-content">
-            <class-text>Project</class-text><div style="width: 100%"></div>
+    <div class="home-banner-wrapper" >
+        <div id="home-bannerText">
+            <home-class-text>Recent Project</home-class-text><div style="width: 100%"></div>
             <h1 style="margin-top: 0;">Haptic Device</h1>
             Wearable Haptic Device for Shape and Weight Rendering.
             <div class="home-link-button">Learn More</div>
         </div>
-        <div class="banner-imgs" style="background-image: url('/resources/home/HaptiX_WhiteContour.JPG')"></div>
+        <div class="home-banner-imgs" style="background-image: url('/resources/home/BannerImg.JPG')"></div>
     </div>
+    <div class="home-section-wrapper">
+        <div id="home-selfIntro">
+            I am <span style="color: rgb(20,100,255)">Chen Qian,</span> an undergraduate student from <br>Zhejiang University-University of Illinois at Urbana-Champaign Institute.
+        </div>
+        <div style="width: 100%"></div>
+        <span class="home-div-line"></span>
+        <div style="width: 100%"></div>
+        <h1 style="font-weight: 300">Biography</h1><div style="width: 100%"></div>
+        <div class="home-section-halfBlock" id="home-about-biography">
+            <span style="font-weight: 500">Education</span><br>
+            <div class="home-timeline">
+                <table class="home-timeline">
+                    <tr>
+                        <th><span>2015-2018</span></th>
+                        <th>Hangzhou High School, Qianjiang Campus</th>
+                    </tr>
+                    <tr>
+                        <th><span>2018-2022</span></th>
+                        <th>Zhejiang University</th>
+                    </tr>
+                    <tr>
+                        <th><span>2018-2022</span></th>
+                        <th>University of Illinois at Urbana-Champaign</th>
+                    </tr>
+                </table>
+            </div>
+            <span style="font-weight: 500">Experiences</span><br>
+            <span style="color: rgba(150,150,150)">DJI RoboMaster University League</span><br>
+            <table class="home-timeline">
+                <tr>
+                    <th><span>2019-2020</span></th>
+                    <th>Project Manager</th>
+                </tr>
+                <tr>
+                    <th><span>2018-now</span></th>
+                    <th>Embedded R&D Team Member</th>
+                </tr>
+            </table>
+            <span style="color: rgba(150,150,150)">Multiple Usage Structural Test Platform</span><br>
+            <table class="home-timeline">
+                <tr>
+                    <th><span>2019</span></th>
+                    <th>Frame Structure Designer</th>
+                </tr>
+                <tr>
+                    <th><span>2019-2020</span></th>
+                    <th>Student Research Training Program</th>
+                </tr>
+            </table>
+        </div>
+        <div style="width: 5%"></div>
+        <img class="home-section-halfBlock" style="margin-bottom: auto" src="/resources/home/personalPhoto.jpeg">
+    </div>
+
 </div>
 </body>
 </html>

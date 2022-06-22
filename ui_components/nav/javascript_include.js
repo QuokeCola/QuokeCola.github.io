@@ -23,7 +23,7 @@ class nav_controller{
      */
     static make_btn(json_link_obj) {
         let btn = document.createElement("div");
-        btn.classList.add("menu-items");
+        btn.classList.add("nav-menu-items");
         btn.innerText = json_link_obj.title;
         btn.onclick = function () {
             nav_controller.loading_status.checked = true;
@@ -39,9 +39,9 @@ class nav_controller{
      */
     static scrollEventHandler() {
         if(nav_controller.content_obj.scrollTop > 0.25*nav_controller.content_obj.clientHeight) {
-            nav_controller.nav_obj.classList.add("scroll-down");
+            nav_controller.nav_obj.classList.add("nav-scrollDown");
         } else{
-            nav_controller.nav_obj.classList.remove("scroll-down");
+            nav_controller.nav_obj.classList.remove("nav-scrollDown");
         }
     }
 

@@ -15,7 +15,7 @@ nav{
     transition: all 0.25s;
 }
 
-.scroll-down{
+.nav-scrollDown{
     border-bottom: rgba(255,255,255,0.2) 1px solid;
     backdrop-filter: blur(20px) brightness(100%) contrast(80%);
     -webkit-backdrop-filter: blur(20px) brightness(100%);
@@ -24,7 +24,7 @@ nav{
 /********************************************//**
  *                Logo Panel
  ***********************************************/
-.nav-logoPanel{
+.nav-logo-panel{
     width: 40px;
     height: 40px;
     margin: 15px;
@@ -37,12 +37,12 @@ nav{
 /********************************************//**
  *                Menu Panel
  ***********************************************/
-.nav-menuPanel{
+.nav-menu-panel{
     transition: all 0.5s cubic-bezier(0.8,0,.2,1.0);
     z-index: 3;
 }
 /*Define the animation curve of links*/
-nav .menu-items{
+nav .nav-menu-items{
     position: relative;
     transition: all 0.5s cubic-bezier(0.8,0,.2,1.0);
 
@@ -52,7 +52,7 @@ nav .menu-items{
     z-index: 5;
 }
 /*The background of menu items*/
-nav .menu-items:after{
+nav .nav-menu-items:after{
     content: "";
     position: absolute;
     left: 0;
@@ -68,11 +68,11 @@ nav .menu-items:after{
     transition: all 0.5s cubic-bezier(0.8,0,.2,1.0);
 }
 /*Hover behavior, font color to white*/
-nav .menu-items:hover{
+nav .nav-menu-items:hover{
     color: white;
 }
 /*Hover behavior, extend*/
-nav .menu-items:hover::after{
+nav .nav-menu-items:hover::after{
     width: 100%;
 }
 
@@ -98,7 +98,7 @@ nav .menu-items:hover::after{
         display: flex;
     }
 
-    .nav-menuPanel {
+    .nav-menu-panel {
         position: absolute;
         right: 50px;
         width: auto;
@@ -109,7 +109,7 @@ nav .menu-items:hover::after{
         display: none;
     }
 
-    nav .menu-items{
+    nav .nav-menu-items{
         padding: 0 5px 0 5px;
         width: auto;
     }
@@ -210,13 +210,13 @@ nav .menu-items:hover::after{
     /********************************************//**
      *                  Link Panel
      ***********************************************/
-    .nav-menuPanel {
+    .nav-menu-panel {
         position: initial;
         width: 100%;
         display: block;
     }
     /*In mobile layout, menu buttons are hidden when checkbox is uncheck*/
-    nav .menu-items{
+    nav .nav-menu-items{
         line-height: 80px;
 
         padding: 0 5% 0 5%;
@@ -228,7 +228,7 @@ nav .menu-items:hover::after{
         border-bottom: rgba(255,255,255,0.2) 0 solid;
     }
     /*Show menu buttons when checkbox is checked*/
-    #nav-panel-status:checked ~ .nav-menuPanel div{
+    #nav-panel-status:checked ~ .nav-menu-panel div{
         height: 80px;
         opacity: 1;
         border-bottom: rgba(255,255,255,0.2) 1px solid;
