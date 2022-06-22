@@ -1,0 +1,9 @@
+#home-showcase{
+    table-layout: fixed;
+    width: 100%;
+}
+
+#home-showcase th .home-card-wrapper{
+    margin: 5px;
+
+}

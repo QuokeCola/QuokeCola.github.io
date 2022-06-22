@@ -16,6 +16,7 @@ nav{
 }
 
 .nav-scrollDown{
+    background-color: rgba(255,255,255,0.5);
     border-bottom: rgba(255,255,255,0.2) 1px solid;
     backdrop-filter: blur(20px) brightness(100%) contrast(80%);
     -webkit-backdrop-filter: blur(20px) brightness(100%);

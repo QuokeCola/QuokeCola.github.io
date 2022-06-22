@@ -25,7 +25,7 @@
 
 .home-timeline span{
     color: rgb(20,100,255);
-    line-break: strict;
+    word-break: keep-all;
 }
 
 #home-about-biography{
@@ -39,7 +39,7 @@
 @media screen and (min-width: 1100px){
 
     #home-selfIntro{
-        width: 600px;
+        width: 700px;
         font-size: 40px;
     }
 
@@ -51,7 +51,7 @@
 @media screen and (max-width: 1099px) and (min-width: 900px){
     #home-selfIntro{
         width: 600px;
-        font-size: 40px;
+        font-size: 35px;
     }
 
     #home-about-biography{
