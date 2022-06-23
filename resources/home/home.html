@@ -74,20 +74,26 @@
                 </tr>
             </table>
         </div>
-        <div class="home-section-halfBlock">
+        <div class="home-section-halfBlock" style="line-height: 0">
             <img style="width: 100%; margin-top: auto" src="/resources/home/personalPhoto.jpeg">
         </div>
-
     </div>
     <div class="home-section-wrapper">
-        <div class="home-section-halfBlock">
-            <div class="home-card-wrapper" style="background-color: rgba(255,255,255,0)">
+        <div class="home-section-halfBlock" style="display: flex; flex-wrap: wrap">
+            <div class="home-card-wrapper"
+                 style="background-color: rgba(255,255,255,0); display: flex; flex-wrap: wrap; align-content: flex-start">
                 <div><h1 style="font-weight: 300; margin: 0; font-size: 30px">Showcase</h1></div>
                 <div style="width: 100%"></div>
-                <div class="home-div-line"></div>
+                <div class="home-div-line" style="margin: 50px 0 50px 5px"></div>
                 <div style="width: 100%"></div>
+                <div class="home-link-button" style="margin-bottom: auto;">More<img src="/resources/home/CornerArrow.svg"></div>
             </div>
-
+            <div class="home-card-wrapper">
+                <div class="home-card-image" style="background-image: url('/resources/home/ThermalCalc.png')"></div>
+                <h1>Thermal Calculator</h1>
+                <p>A iOS application for calculating substance properties.</p>
+                <img src="/resources/home/linkArrow.svg">
+            </div>
         </div>
         <div class="home-section-halfBlock" style="display: flex; flex-wrap: wrap">
             <div class="home-card-wrapper">
@@ -103,7 +109,6 @@
                 <img src="/resources/home/linkArrow.svg">
             </div>
         </div>
-
     </div>
 </div>
 </body>
