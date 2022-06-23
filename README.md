@@ -1,8 +1,7 @@
-# Meta-Team.github.io
-official website of Meta-Team, ZJUI
+# Forked from Meta-Team.github.io
 
 # Preview
-[Website Preview](https://meta-team.github.io/)
+[Website Preview](https://quokecola.github.io/)
 
 # Code
 Clone the repository in Jetbrains WebStorm. :-)
