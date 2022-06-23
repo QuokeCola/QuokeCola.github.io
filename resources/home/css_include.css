@@ -1,6 +1,148 @@
-@import "modules.css";
+@import "banner.css";
+@import "about.css";
+
 :root{
-    --home-content-border-width: 2px; /**Need to be even number to get correct layout on chrome*/
-    --home-content-border-color: rgba(255,255,255,.3);
+    --accent-color: rgb(20,100,255)
 }
+
+.home-section-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: calc(100% - 80px);
+    margin: 40px;
+}
+
+.home-div-line{
+    width: 50px;
+    height: 1px;
+    margin: 100px 0 100px 0;
+    background-color: rgb(150,150,150);
+}
+
+home-class-text {
+    font-style: normal;
+    font-family: "Blender Pro", serif;
+    color: var(--accent-color);
+    line-height: 1.0;
+}
+
+.home-link-button{
+    padding: 10px 20px;
+    border: black solid 2px;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-weight: 500;
+
+    transition: cubic-bezier(0.5,0.0, 0.5, 1.0) .15s;
+    user-select: none;
+}
+
+.home-link-button:hover{
+    padding: 8px 18px;
+    border: black solid 4px;
+}
+
+.home-card-wrapper{
+    background-color: rgb(244,244,244);
+    position: relative;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+}
+
+.home-card-wrapper:hover{
+    background-color: rgb(220,220,220);
+}
+
+.home-card-wrapper .home-card-image{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.home-card-wrapper h1{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.home-card-wrapper p{
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+
+.home-card-wrapper img{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.home-section-halfBlock{
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+    margin-bottom: var(--home-grid-border-width);
+}
+
+@media screen and (min-width: 900px){
+    :root{
+        --home-grid-border-width: 20px
+    }
+
+    .home-section-halfBlock{
+        width: calc(50% - var(--home-grid-border-width)/2);
+    }
+
+    .home-section-halfBlock:nth-child(2n+1){
+        margin-right: var(--home-grid-border-width);
+    }
+
+    home-class-text{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 899px) {
+
+    :root{
+        --home-grid-border-width: 10px
+    }
+
+    .home-section-halfBlock{
+        width: 100%;
+    }
+
+    home-class-text{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 550px) {
+    .home-card-wrapper{
+        width: calc(50% - var(--home-grid-border-width)/2);
+        height: 100%;
+    }
+
+    .home-card-wrapper:nth-child(2n+1){
+        margin-right: var(--home-grid-border-width);
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .home-card-wrapper{
+        width: 100%
+    }
+
+    .home-card-wrapper:nth-child(2n+1){
+        margin-bottom: var(--home-grid-border-width);
+        margin-right: 0;
+    }
+}
+
+
 

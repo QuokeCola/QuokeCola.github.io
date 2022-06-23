@@ -24,7 +24,7 @@
 }
 
 .home-timeline span{
-    color: rgb(20,100,255);
+    color: var(--accent-color);
     word-break: keep-all;
     white-space: nowrap;
 }
