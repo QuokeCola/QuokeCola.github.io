@@ -5,6 +5,7 @@
     position: relative;
     border-bottom: solid 1px rgb(225,225,225);
     flex-wrap: wrap;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 .home-banner-imgs{
@@ -22,6 +23,11 @@
 #home-bannerText{
     display: flex;
     flex-wrap: wrap;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+}
+
+#home-bannerText h1{
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 @media screen and (min-width: 700px){

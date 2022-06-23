@@ -1,5 +1,7 @@
 #home-selfIntro{
     font-weight: 300;
+
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 .home-timeline{
@@ -7,6 +9,8 @@
     margin: 0;
     border-collapse: collapse;
     border-spacing: 0;
+
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 .home-timeline tr,th{
@@ -17,6 +21,8 @@
     padding: 0;
     margin: 0;
     border: 0;
+
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 .home-timeline th{
@@ -31,10 +37,11 @@
 
 #home-about-biography{
     margin-bottom: 50px;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
 .home-about-personalPhoto{
-    margin-bottom: auto;
+    margin-top: auto;
 }
 
 @media screen and (min-width: 1100px){
