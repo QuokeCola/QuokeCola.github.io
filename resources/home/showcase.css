@@ -1,9 +1,18 @@
+#home-showcase-title{
+    transition: all cubic-bezier(0.8, 0.0, 0.0, 1.0) .75s;
+}
 @media screen and (min-width: 550px) {
+    #home-showcase-title{
+        margin-top: 0;
+    }
     #home-showcase-line{
         margin: 50px 0 50px 5px;
     }
 }@media screen and (max-width: 549px) {
+    #home-showcase-title{
+        margin-top: 40px;
+    }
     #home-showcase-line{
-        margin: 50px 0 10px 5px;
+        margin: 10px 0 10px 5px;
     }
 }
