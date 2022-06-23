@@ -1,11 +1,3 @@
-#home-showcase{
-    table-layout: fixed;
-    width: 100%;
-}
-
-#home-showcase th .home-card-wrapper{
-    margin: 5px;
-}
 @media screen and (min-width: 550px) {
     #home-showcase-line{
         margin: 50px 0 50px 5px;

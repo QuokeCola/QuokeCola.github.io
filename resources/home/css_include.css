@@ -1,5 +1,6 @@
 @import "banner.css";
 @import "about.css";
+@import "showcase.css";
 
 :root{
     --accent-color: rgb(20,100,255)
