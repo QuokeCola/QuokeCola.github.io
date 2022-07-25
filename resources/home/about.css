@@ -45,6 +45,7 @@
     height: 100px;
     text-align: center;
     align-items: center;
+    vertical-align: center;
 
     background-color: rgb(244, 244, 244);
 }
