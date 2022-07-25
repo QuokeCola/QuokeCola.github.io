@@ -43,9 +43,12 @@
 #home-copyright{
     width: 100%;
     height: 100px;
+
+    display: flex;
     text-align: center;
     align-items: center;
     vertical-align: center;
+    justify-content: center;
 
     background-color: rgb(244, 244, 244);
 }
