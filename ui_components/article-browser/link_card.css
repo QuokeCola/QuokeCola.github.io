@@ -51,8 +51,15 @@
     background-color: rgb(244,244,244);
     position: relative;
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
-    height: 400px;
     margin-bottom: var(--article-grid-border-width);
+}
+
+#article-content_panel > .article-card-wrapper {
+    height: 400px;
+}
+
+#article-content_panel > .article-card-wrapper > p {
+    -webkit-line-clamp: 5;
 }
 
 .article-card-wrapper:hover{
@@ -76,11 +83,16 @@
 }
 
 .article-card-wrapper > p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
     font-size: 15px;
     font-weight: 300;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 50px;
+    text-overflow: ellipsis;
 
     transition: all .5s cubic-bezier(.8, 0.0, 0.0, 1.0) .25s;
 }

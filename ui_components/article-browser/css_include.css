@@ -22,7 +22,6 @@
 
 #article-side_panel{
     height: fit-content;
-    background-color: aqua;
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
 
