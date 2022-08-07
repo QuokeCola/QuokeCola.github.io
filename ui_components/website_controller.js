@@ -17,14 +17,15 @@ class website_controller{
                 content_loader.init(parsed_json);
                 document.title = parsed_json.title;
                 let current_sub_page_index = 0;
+                let url_levels = window.location.href.split("#")
                 for (let i = 0; i < parsed_json.links.length; i++) {
-                    if (window.location.href.indexOf(parsed_json.links[i].title)!==-1) {
+                    if (url_levels[1] === parsed_json.links[i].title) {
                         current_sub_page_index = i;
                         _this_ref.loading_status.checked = true;
                         _this_ref.link_panel_status.checked = false;
                         let event = new CustomEvent("loadContentRequest",{detail:parsed_json.links[current_sub_page_index]});
                         document.dispatchEvent(event);
-                    } else if(window.location.href.includes("#404")){
+                    } else if(url_levels[1]==="404"){
                         _this_ref.loading_status.checked = true;
                         content_loader.catch_error("404");
                     } else {
@@ -32,7 +33,6 @@ class website_controller{
                         document.dispatchEvent(event);
                     }
                 }
-
             }
         }
     }

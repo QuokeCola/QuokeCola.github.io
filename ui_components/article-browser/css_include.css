@@ -1,0 +1,62 @@
+@import "/ui_components/article-browser/side_panel.css";
+@import "/ui_components/article-browser/link_card.css";
+
+.article_br-banner {
+    margin: 80px var(--article-margin) 0 var(--article-margin);
+    width: calc(100% - 2 * var(--article-margin));
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+}
+
+.article_br-banner > h1{
+    font-family: IBM Plex Sans, serif;
+    font-weight: 300;
+}
+
+#article-content_panel{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-self: start;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+}
+
+#article-side_panel{
+    height: fit-content;
+    background-color: aqua;
+    transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
+}
+
+@media screen and (min-width: 1000px) {
+    :root{
+        --article-grid-border-width: 20px;
+        --article-margin: 80px;
+    }
+
+    #article-content_panel{
+        margin-left: var(--article-margin);
+        width: calc((100% - 2 * var(--article-margin)) * 0.75);
+    }
+
+    #article-side_panel {
+        margin-right: var(--article-margin);
+        margin-left: var(--article-grid-border-width);
+        width: calc((100% - 2 * var(--article-margin)) * 0.25 - var(--article-grid-border-width));
+    }
+}
+
+@media screen and (max-width: 999px) {
+    :root{
+        --article-grid-border-width: 10px;
+        --article-margin:40px;
+    }
+
+    #article-content_panel{
+        margin: 0 var(--article-margin) 0 var(--article-margin);
+        width: calc(100% - 2 * var(--article-margin));
+    }
+
+    #article-side_panel {
+        margin: 0 var(--article-margin) 0 var(--article-margin);
+        width: calc(100% - 2 * var(--article-margin));
+    }
+}

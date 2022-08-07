@@ -1,6 +1,6 @@
-@import "/resources/home/banner.css";
-@import "/resources/home/about.css";
-@import "/resources/home/showcase.css";
+@import "/resources/htmls/home/banner.css";
+@import "/resources/htmls/home/about.css";
+@import "/resources/htmls/home/showcase.css";
 
 :root{
     --accent-color: rgb(20,100,255)
@@ -11,7 +11,6 @@
     flex-wrap: wrap;
 
     width: calc(100% - 80px);
-    margin: 0 40px 0 40px;
 
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 }
@@ -152,6 +151,7 @@ home-class-text {
 }
 
 @media screen and (min-width: 550px) {
+
     .home-card-wrapper{
         width: calc(50% - var(--home-grid-border-width)/2);
         height: 100%;
@@ -163,6 +163,7 @@ home-class-text {
 }
 
 @media screen and (max-width: 549px) {
+
     .home-card-wrapper{
         width: 100%
     }
@@ -173,5 +174,15 @@ home-class-text {
     }
 }
 
+@media screen and (min-width: 700px) {
+    .home-section-wrapper{
+        margin: 0 80px 0 80px;
+    }
+}
 
+@media screen and (max-width: 699px) {
+    .home-section-wrapper{
+        margin: 0 40px 0 40px;
+    }
+}
 

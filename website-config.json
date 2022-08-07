@@ -5,11 +5,11 @@
   "links": [
     {
       "title": "HOME",
-      "src": "/resources/home/home.html"
+      "src": "/resources/htmls/home/home.html"
     },
     {
       "title": "ARTICLES",
-      "src": "/resources/infantry/infantry.html"
+      "src": "/ui_components/article-browser/index.html"
     },
     {
       "title": "WEBSERVICE",

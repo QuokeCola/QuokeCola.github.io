@@ -243,6 +243,7 @@ horz-line:nth-child(odd){
     -webkit-animation: loading-strip-move 2s linear;
     animation-iteration-count: infinite;
 }
+
 #loading-status:checked ~ #loading-screen .loading-text::after{
     padding: 25px;
 
@@ -251,6 +252,7 @@ horz-line:nth-child(odd){
     -webkit-animation: loading-text-show 1s 0.5s forwards;
     background-size: 10px 10px;
 }
+
 #loading-status:checked ~ #loading-screen #loading-orgName{
     animation: loading-text-show .25s .25s forwards;
     -webkit-animation: loading-text-show .25s .25s forwards;
