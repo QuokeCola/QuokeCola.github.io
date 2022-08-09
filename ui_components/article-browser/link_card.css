@@ -23,7 +23,7 @@
     animation: loading-animation 1.5s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
     -webkit-animation: loading-animation 1.5s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
 
-    opacity: 0.8;
+    opacity: 1.0;
 }
 
 .article-card-loading > .article-card-image-wrapper:before{
