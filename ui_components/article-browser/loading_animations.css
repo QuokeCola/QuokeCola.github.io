@@ -1,0 +1,75 @@
+:root{--loading-placeholder-background-img: linear-gradient(45deg,
+    rgb(222,222,222) 50px,
+    rgb(200,200,200) 100px,
+    rgb(200,200,200) 150px,
+    rgb(222,222,222) 200px,
+    rgb(222,222,222) 250px,
+    rgb(200,200,200) 300px,
+    rgb(200,200,200) 350px,
+    rgb(222,222,222) 400px,
+    rgb(222,222,222) 450px,
+    rgb(200,200,200) 500px,
+    rgb(200,200,200) 550px,
+    rgb(222,222,222) 600px,
+    rgb(222,222,222) 650px,
+    rgb(200,200,200) 700px,
+    rgb(200,200,200) 750px,
+    rgb(222,222,222) 800px,
+    rgb(222,222,222) 850px,
+    rgb(200,200,200) 900px,
+    rgb(200,200,200) 950px);
+}
+
+:root{--loading-placeholder-background-img-large: linear-gradient(45deg,
+    rgb(222,222,222) 50px,
+    rgb(200,200,200) 100px,
+    rgb(200,200,200) 150px,
+    rgb(222,222,222) 200px,
+    rgb(222,222,222) 250px,
+    rgb(200,200,200) 300px,
+    rgb(200,200,200) 350px,
+    rgb(222,222,222) 400px,
+    rgb(222,222,222) 450px,
+    rgb(200,200,200) 500px,
+    rgb(200,200,200) 550px,
+    rgb(222,222,222) 600px,
+    rgb(222,222,222) 650px,
+    rgb(200,200,200) 700px,
+    rgb(200,200,200) 750px,
+    rgb(222,222,222) 800px,
+    rgb(222,222,222) 850px,
+    rgb(200,200,200) 900px,
+    rgb(200,200,200) 950px,
+    rgb(222,222,222) 1000px,
+    rgb(200,200,200) 1050px,
+    rgb(200,200,200) 1100px,
+    rgb(222,222,222) 1150px,
+    rgb(222,222,222) 1200px,
+    rgb(200,200,200) 1250px,
+    rgb(200,200,200) 1300px,
+    rgb(222,222,222) 1350px,
+    rgb(222,222,222) 1400px,
+    rgb(200,200,200) 1450px,
+    rgb(200,200,200) 1500px,
+    rgb(222,222,222) 1550px,
+    rgb(222,222,222) 1600px,
+    rgb(200,200,200) 1650px,
+    rgb(200,200,200) 1700px,
+    rgb(222,222,222) 1750px,
+    rgb(222,222,222) 1800px,
+    rgb(200,200,200) 1850px,
+    rgb(200,200,200) 1900px
+);
+}
+
+@keyframes loading-animation {
+    from {
+        background-position-y: 50%;
+        background-position-x: calc(40% - 0.707 * 200px);
+    }
+
+    to {
+        background-position-y: 50%;
+        background-position-x: calc(40% + 0.707 * 200px);
+    }
+}

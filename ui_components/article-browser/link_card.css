@@ -1,17 +1,4 @@
-:root{--loading-placeholder-background-img: linear-gradient(45deg,
-                                rgb(222,222,222) 50px,
-                                rgb(200,200,200) 150px,
-                                rgb(200,200,200) 250px,
-                                rgb(222,222,222) 350px,
-                                rgb(222,222,222) 450px,
-                                rgb(200,200,200) 550px,
-                                rgb(200,200,200) 650px,
-                                rgb(222,222,222) 750px,
-                                rgb(222,222,222) 850px,
-                                rgb(200,200,200) 950px,
-                                rgb(200,200,200) 1050px);
-}
-
+@import "loading_animations.css";
 .article-card-loading > .article-card-image-wrapper:after{
     content: " ";
     position: absolute;
@@ -41,8 +28,8 @@
     border-radius: 5px;
     color: transparent;
 
-    background-size: 1000px 1000px;
-    background-image: var(--loading-placeholder-background-img);
+    background-size: 2000px 2000px;
+    background-image: var(--loading-placeholder-background-img-large);
 
     animation: 1.5s loading-animation 0.125s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
     -webkit-animation: 1.5s loading-animation 0.125s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
@@ -52,8 +39,8 @@
     border-radius: 5px;
     color: transparent;
 
-    background-size: 1000px 1000px;
-    background-image: var(--loading-placeholder-background-img);
+    background-size: 2000px 2000px;
+    background-image: var(--loading-placeholder-background-img-large);
 
     animation: 1.5s loading-animation 0.25s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
     -webkit-animation: 1.5s loading-animation 0.25s cubic-bezier(.8, 0.0, 0.0, 1.0) infinite;
@@ -111,8 +98,8 @@
     width: 100%;
     height: 200px;
 
-    background-size: 1000px 1000px;
-    background-image: var(--loading-placeholder-background-img);
+    background-size: 2000px 2000px;
+    background-image: var(--loading-placeholder-background-img-large);
 
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
 
@@ -186,17 +173,5 @@
     #article-content_panel > .article-card-wrapper {
         width: 100%;
         margin-right: 0;
-    }
-}
-
-@keyframes loading-animation {
-    from {
-        background-position-y: 500px;
-        background-position-x: 416px;
-    }
-
-    to {
-        background-position-y: 500px;
-        background-position-x: 982px;
     }
 }
