@@ -1,5 +1,7 @@
 @import "/ui_components/article-browser/side_panel.css";
 @import "/ui_components/article-browser/link_card.css";
+@import "/ui_components/article-browser/highlight.min.css";
+@import "/ui_components/article-browser/md-custom.css";
 
 .article_br-banner {
     margin: 80px var(--article-margin) 0 var(--article-margin);

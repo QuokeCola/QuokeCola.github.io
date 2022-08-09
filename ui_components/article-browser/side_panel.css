@@ -26,9 +26,14 @@
     cursor: pointer;
 }
 
-#article-tags-content > button:focus{
+#article-tags-content > .article-tag-selected{
     background-color: #555;
     color: #fff;
+}
+
+#article-recommendations-content {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #article-recommendations-content > .article-card-wrapper{
