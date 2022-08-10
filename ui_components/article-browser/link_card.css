@@ -54,11 +54,11 @@
     margin-bottom: var(--article-grid-border-width);
 }
 
-#article-content_panel > .article-card-wrapper {
+#article-main-content > .article-card-wrapper {
     height: 400px;
 }
 
-#article-content_panel > .article-card-wrapper > p {
+#article-main-content > .article-card-wrapper > p {
     -webkit-line-clamp: 5;
 }
 
@@ -99,7 +99,7 @@
     width: 100%;
     height: 200px;
 
-    background-size: 2000px 2000px;
+    background-size: 4000px 4000px;
     background-image: var(--loading-placeholder-background-img-large);
 
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;
@@ -139,39 +139,39 @@
 }
 
 @media screen and (min-width: 800px) {
-    #article-content_panel > .article-card-wrapper {
+    #article-main-content > .article-card-wrapper {
         width: calc((100% - 2 * var(--article-grid-border-width)) / 3);
     }
 
-    #article-content_panel > .article-card-wrapper:nth-child(3n+1) {
+    #article-main-content > .article-card-wrapper:nth-child(3n+1) {
         margin-right: var(--article-grid-border-width);
     }
 
-    #article-content_panel > .article-card-wrapper:nth-child(3n+2) {
+    #article-main-content > .article-card-wrapper:nth-child(3n+2) {
         margin-right: var(--article-grid-border-width);
     }
 
-    #article-content_panel > .article-card-wrapper:nth-child(3n) {
+    #article-main-content > .article-card-wrapper:nth-child(3n) {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 799px) and (min-width: 550px){
-    #article-content_panel > .article-card-wrapper {
+    #article-main-content > .article-card-wrapper {
         width: calc((100% - var(--article-grid-border-width)) / 2);
     }
 
-    #article-content_panel > .article-card-wrapper:nth-child(2n+1) {
+    #article-main-content > .article-card-wrapper:nth-child(2n+1) {
         margin-right: var(--article-grid-border-width);
     }
 
-    #article-content_panel > .article-card-wrapper:nth-child(2n) {
+    #article-main-content > .article-card-wrapper:nth-child(2n) {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 549px) {
-    #article-content_panel > .article-card-wrapper {
+    #article-main-content > .article-card-wrapper {
         width: 100%;
         margin-right: 0;
     }

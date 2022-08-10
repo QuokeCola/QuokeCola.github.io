@@ -15,31 +15,25 @@
 </head>
 <body style="margin: 0">
 <div id="content-screen" class="content-screen">
-    <!--    Write your HTML here.-->
-    <div class="article_br-banner">
+    <div class="article-banner">
         <h1 id="article-title"></h1>
     </div>
-    <div id="article-content_panel">
+    <div class="article-main-wrapper">
+        <div id="article-main-content">
+        </div>
+        <div id="article-index-wrapper">
+            <button>a</button><div id="article-index-content"><button>a</button></div><button>a</button>
+        </div>
     </div>
-
-    <div id="article-side_panel">
-        <div id="article-tags">
+    <div id="article-side">
+        <div id="article-tags-wrapper">
             <h2>Tags</h2>
             <div id="article-tags-content">
-                <button>Hello</button>
             </div>
         </div>
-        <div id="article-recommendations">
+        <div id="article-recommendations-wrapper">
             <h2>Recommended</h2>
             <div id="article-recommendations-content">
-                <div class="article-card-wrapper" >
-                    <div class="article-card-image-wrapper">
-                        <img class="article-card-image" src="/resources/htmls/home/PCB.png">
-                    </div>
-                    <h1>Robomaster PCBs</h1>
-                    <p>PCB for ZJUI Robomaster team vehicles. </p>
-                    <img class="article-card-link-arrow"src="/resources/htmls/home/linkArrow.svg">
-                </div>
             </div>
         </div>
     </div>
@@ -47,12 +41,12 @@
         &#169; Chen Qian, 2019-2022
     </div>
 </div>
-<script src="article_browser.js"></script>
-<script>    let article_browser = new ArticleBrowser("/resources/markdowns");
+<script src="article_browser_interface.js"></script>
+<script>    let article_browser = new ArticleBrowserIF("/resources/markdowns");
             article_browser.onload = function () {
-                for (let i = 0; i < this.document_info.length; i++) {
-                    article_browser.content_panel.append(article_browser.generate_link_card(article_browser.document_info[i]))
-                }
+                article_browser.update_article_list([])
+                article_browser.show_page(1)
+                article_browser.refresh_indexes()
             }
 </script>
 <!--No javascript were able to run in this way...-->

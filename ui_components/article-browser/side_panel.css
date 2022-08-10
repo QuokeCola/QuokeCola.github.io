@@ -1,9 +1,9 @@
-#article-side_panel h2{
+#article-side h2{
     font-family: IBM Plex Sans, serif;
     font-weight: 300;
 }
 
-#article-side_panel div:first-child > h2 {
+#article-side div:first-child > h2 {
     margin-top: 0;
 }
 
@@ -13,7 +13,7 @@
 }
 
 #article-tags-content > button{
-    font-size: 15px;
+    font-size: 10px;
     padding: 5px 10px 5px 10px;
     margin: 5px 5px 5px 0;
     line-height: 1;

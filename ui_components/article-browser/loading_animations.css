@@ -73,3 +73,7 @@
         background-position-x: calc(40% + 0.707 * 200px);
     }
 }
+
+.fade {
+    opacity: 0.0;
+}

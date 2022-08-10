@@ -1,10 +1,7 @@
 @import "/resources/htmls/home/banner.css";
 @import "/resources/htmls/home/about.css";
 @import "/resources/htmls/home/showcase.css";
-
-:root{
-    --accent-color: rgb(20,100,255)
-}
+@import "/ui_components/css_include.css";
 
 .home-section-wrapper{
     display: flex;
