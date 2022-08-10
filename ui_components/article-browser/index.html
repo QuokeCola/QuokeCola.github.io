@@ -44,7 +44,7 @@
 <script src="article_browser_interface.js"></script>
 <script>    let article_browser = new ArticleBrowserIF("/resources/markdowns");
             article_browser.onload = function () {
-                article_browser.update_article_list([])
+                article_browser.refresh_article_list([])
                 article_browser.show_page(1)
                 article_browser.refresh_indexes()
             }
