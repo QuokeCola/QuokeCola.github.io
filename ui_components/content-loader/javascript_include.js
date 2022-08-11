@@ -1,6 +1,9 @@
 document.write("<script language=javascript src='/ui_components/common_function.js'></script>")
+document.write("<script language=javaScript src='/ui_components/article-browser/article_browser_scheduler.js'></script>")
 class content_loader {
     static init(parsed_json) {
+        this.article_scheduler = new ArticleBrowserSKD('/resources/markdowns')
+
         content_loader.content_window_obj = document.getElementById("content-screen");
         content_loader.loading_grid_obj = document.getElementById("loading-grid");
         content_loader.organization_name_obj = document.getElementById("loading-orgName");
@@ -37,7 +40,7 @@ class content_loader {
 
     static load_content(event){
         let _content_loader_ref = content_loader;
-        let htmlParser = new HTML_parser(event.detail.src);
+        let htmlParser = new HTML_parser(event.detail.web_info.src);
         htmlParser.onload = function () {
             setTimeout(function (){
                 // Clear previous page CSS
@@ -67,7 +70,21 @@ class content_loader {
                 }
                 _content_loader_ref.content_window_obj.innerHTML = innerHTML;
                 // Browser history
-                window.history.pushState(event.detail,  event.detail.title, "#"+event.detail.title);
+                if(event.detail.web_info.title != "ARTICLES") {
+                    window.history.pushState(event.detail.web_info,  event.detail.web_info.title, "#"+event.detail.web_info.title);
+                } else {
+                    _content_loader_ref.article_scheduler.awake()
+                    _content_loader_ref.article_scheduler.onload = function () {
+                        if(event.detail.article_info != undefined) {
+                            let event_tag = event.detail.article_info.tags;
+                            let event_page = event.detail.article_info.page;
+                            let event_md   = event.detail.article_info.md_src;
+                            _content_loader_ref.article_scheduler.update_ui_by_state({md_src: event_md, tags: event_tag, page: event_page})
+                        } else {
+                            _content_loader_ref.article_scheduler.update_ui_by_local()
+                        }
+                    }
+                }
                 _content_loader_ref.loading_status.checked = false;
             },1000);
         };

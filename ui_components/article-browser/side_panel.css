@@ -12,6 +12,14 @@
     flex-wrap: wrap;
 }
 
+#article-tags-wrapper{
+    transition: opacity linear .25s;
+}
+
+#article-recommendations-wrapper{
+    transition: opacity linear .25s;
+}
+
 #article-tags-content > button{
     font-size: 10px;
     padding: 5px 10px 5px 10px;
@@ -42,6 +50,12 @@
 
 #article-recommendations-content > .article-card-wrapper > p {
     -webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 1000px) {
+    #article-recommendations-content > .article-card-wrapper{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {

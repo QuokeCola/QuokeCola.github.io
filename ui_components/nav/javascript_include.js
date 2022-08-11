@@ -28,7 +28,7 @@ class nav_controller{
         btn.onclick = function () {
             nav_controller.loading_status.checked = true;
             nav_controller.link_panel_status.checked = false;
-            let event = new CustomEvent("loadContentRequest",{detail:json_link_obj});
+            let event = new CustomEvent("loadContentRequest",{detail:{web_info: json_link_obj}});
             document.dispatchEvent(event);
         }
         this.menu_panel_obj.appendChild(btn);

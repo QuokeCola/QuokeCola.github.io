@@ -20,7 +20,15 @@
             <home-class-text>Recent Project</home-class-text><div style="width: 100%"></div>
             <h1 style="margin-top: 0;">Haptic Device</h1>
             Wearable Haptic Device for Shape and Weight Rendering.
-            <div class="home-link-button">Learn More<img src="/resources/htmls/home/CornerArrow.svg"></div>
+            <div class="home-link-button" onclick="
+                let loading_status = document.getElementById('loading-status')
+                let link_panel_status = document.getElementById('nav-panel-status')
+                loading_status.checked = true;
+                link_panel_status.checked = false;
+                let onclick_event = new CustomEvent('loadContentRequest',
+                            {detail:{web_info:{title: 'ARTICLES', src: '/ui_components/article-browser/index.html'},
+                                     article_info: {tags: [], page: 1, md_src: 'Article9/Haptic2RR-Arm.md'}}});
+                document.dispatchEvent(onclick_event)">Learn More<img src="/resources/htmls/home/CornerArrow.svg"></div>
         </div>
         <div class="home-banner-imgs" style="background-image: url('/resources/htmls/home/BannerImg.JPG')"></div>
     </div>
@@ -83,9 +91,10 @@
                 <div style="width: 100%"></div>
                 <div class="home-div-line" id="home-showcase-line"></div>
                 <div style="width: 100%"></div>
-                <div class="home-link-button" style="margin-bottom: auto;">More<img src="/resources/htmls/home/CornerArrow.svg"></div>
+                <div class="home-link-button" style="margin-bottom: auto;"
+                onclick="javascript:window.open('https://github.com/QuokeCola/')">More<img src="/resources/htmls/home/CornerArrow.svg"></div>
             </div>
-            <div class="home-card-wrapper">
+            <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/ThermoCalculator')">
                 <div class="home-card-image" style="background-image: url('/resources/htmls/home/ThermalCalc.png')"></div>
                 <h1>Thermal Calculator</h1>
                 <p>A iOS application for calculating substance properties.</p>
@@ -93,13 +102,13 @@
             </div>
         </div>
         <div class="home-section-halfBlock" style="display: flex; flex-wrap: wrap">
-            <div class="home-card-wrapper">
+            <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/Meta_Terminal_Rebuild')">
                 <div class="home-card-image" style="background-image: url('/resources/htmls/home/Terminal.png')"></div>
                 <h1>Meta Terminal 2</h1>
                 <p>Adjust vehicle PID parameters through a visualized terminal.</p>
                 <img class="home-card-link-arrow" src="/resources/htmls/home/linkArrow.svg">
             </div>
-            <div class="home-card-wrapper">
+            <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/Robomaster-PCBs')">
                 <div class="home-card-image" style="background-image: url('/resources/htmls/home/PCB.png')"></div>
                 <h1>Robomaster PCBs</h1>
                 <p>PCB for ZJUI Robomaster team vehicles. </p>

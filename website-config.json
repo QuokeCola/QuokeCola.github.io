@@ -10,10 +10,6 @@
     {
       "title": "ARTICLES",
       "src": "/ui_components/article-browser/index.html"
-    },
-    {
-      "title": "WEBSERVICE",
-      "src": "hero"
     }
   ]
 }

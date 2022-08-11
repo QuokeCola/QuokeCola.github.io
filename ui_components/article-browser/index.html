@@ -16,13 +16,13 @@
 <body style="margin: 0">
 <div id="content-screen" class="content-screen">
     <div class="article-banner">
-        <h1 id="article-title"></h1>
+        <h1 id="article-title-wrapper"><img src="/ui_components/article-browser/left_arrow.svg"><p id="article-title-content">Articles</p></h1>
     </div>
     <div class="article-main-wrapper">
         <div id="article-main-content">
         </div>
         <div id="article-index-wrapper">
-            <button>a</button><div id="article-index-content"><button>a</button></div><button>a</button>
+            <button id="article-index-btn-left"><</button><div id="article-index-content"></div><button id="article-index-btn-right">></button>
         </div>
     </div>
     <div id="article-side">
@@ -41,13 +41,8 @@
         &#169; Chen Qian, 2019-2022
     </div>
 </div>
-<script src="article_browser_interface.js"></script>
-<script>    let article_browser = new ArticleBrowserIF("/resources/markdowns");
-            article_browser.onload = function () {
-                article_browser.refresh_article_list([])
-                article_browser.show_page(1)
-                article_browser.refresh_indexes()
-            }
+<script src="article_browser_scheduler.js"></script>
+<script>    let article_browser = new ArticleBrowserSKD("/resources/markdowns");
 </script>
 <!--No javascript were able to run in this way...-->
 </body>

@@ -44,3 +44,8 @@ class HTML_parser{
     }
 
 }
+
+function sleep(d){
+    let t = Date.now();
+    while(Date.now() - t <= d);
+}
