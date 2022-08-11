@@ -80,7 +80,7 @@
 }
 
 .article-card-image-wrapper:before{
-    z-index: 4;
+    z-index: 1;
     content: " ";
     position: absolute;
     width: 100%;
@@ -92,7 +92,7 @@
 }
 
 .article-card-image-wrapper:after{
-    z-index: 5;
+    z-index: 2;
 
     content: " ";
     position: absolute;
