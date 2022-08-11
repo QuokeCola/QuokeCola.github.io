@@ -69,14 +69,14 @@ class ArticleBrowserSKD {
             if(!_this_ref.article_title_wrapper.classList.contains("entered_article")) {
                 _this_ref.article_title_wrapper.classList.add("entered_article")
             }
-            history.back()
+            window.history.back()
             setTimeout(function () {
-                if(history.state.tags !== undefined) {
-                    _this_ref.update_ui_by_state(history.state)
+                if(window.history.state.tags !== undefined && window.history.state.md_src!=="none") {
+                    console.log(window.history.state.md_src)
+                    _this_ref.update_ui_by_state(window.history.state, window.history.length > 1)
                 } else {
                     _this_ref.md_src = "none"
-                    _this_ref.update_ui_by_local()
-                    _this_ref.content_push_history()
+                    _this_ref.update_ui_by_local(window.history.length > 1)
                 }
             },100)
         }
@@ -123,13 +123,13 @@ class ArticleBrowserSKD {
         this.article_interface.tag_panel_fade()
         this.article_interface.index_panel_fade()
         _this_ref.article_interface.recommend_panel_fade()
+        _this_ref.markdown_push_history(event.detail)
         setTimeout(function () {
             _this_ref.article_interface.generate_recommended()
             _this_ref.article_interface.clear_main_view()
             _this_ref.article_interface.show_article(src)
             _this_ref.article_interface.recommend_panel_show()
             _this_ref.article_interface.content_panel_show()
-            _this_ref.markdown_push_history(event.detail)
         },250)
     }
 
@@ -154,10 +154,10 @@ class ArticleBrowserSKD {
     content_push_history() {
         let url = "#" + "ARTICLES" + "#TAGS"
         this.tags.forEach(tag=>{
-            url = url + "&"+tag
+            url = url + "&" + tag
         })
         url = url + "#"+this.idx
-        history.pushState({tags: this.tags, page: this.idx, md_src: "none"},"ARTICLES", url)
+        window.history.pushState({tags: this.tags, page: this.idx, md_src: "none"},"ARTICLES", url)
     }
 
     markdown_push_history(article_object) {
@@ -167,14 +167,14 @@ class ArticleBrowserSKD {
             url = url + "&"+ tag
         })
         url = url + "#"+this.idx + "#"+md_src.replace('/',"^").replace(".md","")
-        history.pushState({tags: this.tags, page: this.idx, md_src: md_src},article_object.title, url)
+        window.history.pushState({tags: this.tags, page: this.idx, md_src: md_src},article_object.title, url)
     }
 
     /**
      * Handle history state, reloaded UI according to the state object.
      * @param state {{md_src: string, page: number, tags: []}}
      */
-    update_ui_by_state(state) {
+    update_ui_by_state(state, tracing_back = false) {
         let _this_ref = this
         this.tags = state.tags
         this.idx = state.page
@@ -188,7 +188,9 @@ class ArticleBrowserSKD {
         if (state.md_src !== "none") { /// Markdown loaded
             this.article_interface.document_info.forEach(document_obj=>{
                 if (state.md_src === document_obj.src) {
-                    this.markdown_push_history(document_obj)
+                    if(!tracing_back) {
+                        this.markdown_push_history(document_obj)
+                    }
                     setTimeout(function () {
                         _this_ref.article_interface.generate_recommended()
                         _this_ref.article_interface.clear_main_view()
@@ -202,7 +204,9 @@ class ArticleBrowserSKD {
             })
         }
         if(!md_loaded) {
-            this.content_push_history()
+            if(!tracing_back) {
+                this.content_push_history()
+            }
             setTimeout(function () {
                 _this_ref.article_interface.refresh_article_list(state.tags)
                 _this_ref.article_interface.refresh_indexes()
@@ -215,9 +219,8 @@ class ArticleBrowserSKD {
         }
     }
 
-    update_ui_by_local() {
-        console.log(this.md_src)
+    update_ui_by_local(tracing_back = false) {
         this.article_interface._init_tag()
-        this.update_ui_by_state({md_src: this.md_src, tags: this.tags, page: this.idx})
+        this.update_ui_by_state({md_src: this.md_src, tags: this.tags, page: this.idx}, tracing_back)
     }
 }
