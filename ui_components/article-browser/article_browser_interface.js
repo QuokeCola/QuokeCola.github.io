@@ -73,6 +73,7 @@ class ArticleBrowserIF {
         }
         let md_file = new XMLHttpRequest()
         let markdown_container = document.createElement("div")
+        markdown_container.classList.add("article-markdown-container")
         md_file.open("get", this._md_dir+ "/" + url)
         md_file.send(null)
         md_file.onload = function () {

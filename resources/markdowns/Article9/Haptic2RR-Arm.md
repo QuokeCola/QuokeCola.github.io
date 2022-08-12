@@ -27,7 +27,7 @@ The motors developed by DJI could be an ideal choice for prototypes of robots, w
 The modules on CAN could communicate with each other by publishing their messages on the network and listen the messages from network. For bandwidth, it can mount 7 motors on the network based on my previous experience.
 CAN’s transmission data follows the format of CAN Frame, including SOF, Identifier, RTR, IDE, DLC, Data Field and so on. ChibiOS provided the interfaces for sending and receiving CAN frames, so we did not need to dig too much into the data format. In the program, identifier and data will be frequently used.
 DJI’s motors has one universal communication protocol. Motor controllers will publish packages contains their feedback data to the CAN-BUS independently, and the control program will send the desired torque current each motor required to the network.
-
+<div style="width: 100%; overflow-x: scroll; border: 1px solid #EEEEEE">
 <table>
     <tr>
         <td colspan="2">Frame type: Standard Frame format: DATA DLC: 8 Bytes</td>
@@ -69,8 +69,10 @@ DJI’s motors has one universal communication protocol. Motor controllers will 
         <td>Null</td>
     </tr>
 </table>
+</div>
 <center>Table 1. C620 Motor Controller Feedback Data</center>
 <br>
+<div style="width: 100%; overflow-x: scroll; border: 1px solid #EEEEEE">
 <table>
 	<tr>
 		<td colspan="3">
@@ -184,6 +186,7 @@ DJI’s motors has one universal communication protocol. Motor controllers will 
 		<td>
 			Controls the current value in lower order byte (8 bits)
 </table>
+</div>
 <center>Table 2. C620 Motor Controller Receiving Data Format</center>
 
 From the datasheet, the feedbacks from motors are independent with each other but the data to control the multiple motor’s torque currents are in one data frame. Thus, the targets are needed to be sent synchronously, or when sending one specific motor’s target current, other motors’ target currents will be overwritten. Based on different hard configuration, the identifier of motors may have to be changed, which made the problem a bit more complex. A CAN motor interface were created to solve the synchronize problem. With the optimization, it takes less resource with less loops ran. To solve the identifier change, logical identifiers (like ‘YAW’ ‘PITCH’ instead of ‘0x201’,’0x204’) were created, and program will automatically generate mappings with the hardware identifier with the logical identifier with a configuration class.

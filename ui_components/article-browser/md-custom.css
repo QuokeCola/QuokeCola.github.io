@@ -1,14 +1,17 @@
-pre{
+.article-markdown-container{
+    width: 100%;
+}
+.article-markdown-container pre{
     padding: 10px;
     background-color: rgba(200,200,200,0.2);
     border-radius: 10px;
 }
 
-pre .hljs{
+.article-markdown-container pre .hljs{
     background-color: transparent;
 }
 
-p img{
+.article-markdown-container p img{
     border-radius: 5px;
     box-shadow: 0 2px 2px rgba(0,28,68,0.3);
     transition: all 0.5s;
@@ -16,21 +19,21 @@ p img{
     width: 100%;
 }
 
-p img:hover{
+.article-markdown-container p img:hover{
     box-shadow: 0 12px 12px rgba(0,28,68,0.3);
 }
 
-p code{
+.article-markdown-container p code{
     background-color: rgba(200,200,200,0.2);
     padding: 4px;
     border-radius: 4px;
 }
 
-table tr td, table tr th, table{
+.article-markdown-container table tr td, table tr th, table{
     border: black 1px solid;
 }
 
-table {
+.article-markdown-container table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
