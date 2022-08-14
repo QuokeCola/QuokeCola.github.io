@@ -1,4 +1,5 @@
 document.write("<script language=javascript src='/ui_components/article-browser/article_browser_interface.js'></script>")
+document.write("<script language=javascript src='/ui_components/common_function.js'></script>")
 
 class ArticleBrowserSKD {
     constructor(md_dir) {
@@ -44,6 +45,7 @@ class ArticleBrowserSKD {
         this.article_title_wrapper = document.getElementById("article-title-wrapper")
 
         this.article_left_btn.onclick = function () {
+            to_top()
             _this_ref.article_interface.refresh_page(_this_ref.idx-1)
             _this_ref.article_interface.highlight_index_btn(_this_ref.idx-1)
             _this_ref.idx = _this_ref.idx-1
@@ -55,6 +57,7 @@ class ArticleBrowserSKD {
         }
 
         this.article_right_btn.onclick = function () {
+            to_top()
             _this_ref.article_interface.refresh_page(_this_ref.idx+1)
             _this_ref.article_interface.highlight_index_btn(_this_ref.idx+1)
             _this_ref.idx = _this_ref.idx+1
@@ -66,6 +69,7 @@ class ArticleBrowserSKD {
         }
 
         this.article_title_wrapper.onclick = function () {
+            to_top()
             if(!_this_ref.article_title_wrapper.classList.contains("entered_article")) {
                 _this_ref.article_title_wrapper.classList.add("entered_article")
             }
@@ -83,6 +87,7 @@ class ArticleBrowserSKD {
     }
 
     handle_tag_click(event) {
+        to_top()
         this.tags = event.detail.selected_tags
         let _this_ref = this
 
@@ -103,6 +108,7 @@ class ArticleBrowserSKD {
     }
 
     handle_index_click(event) {
+        to_top()
         let _this_ref = this
         this.idx = event.detail
 
@@ -116,6 +122,7 @@ class ArticleBrowserSKD {
     }
 
     handle_link_card_click(event) {
+        to_top()
         let src = event.detail.src
         this.md_src = event.detail.src
         let _this_ref = this
@@ -184,6 +191,7 @@ class ArticleBrowserSKD {
         this.article_interface.tag_panel_fade()
         this.article_interface.recommend_panel_fade()
         this.article_interface.index_panel_fade()
+        this.validate_index_left_right_btn_enable()
         let md_loaded = false
         if (state.md_src !== "none") { /// Markdown loaded
             this.article_interface.document_info.forEach(document_obj=>{
@@ -197,7 +205,6 @@ class ArticleBrowserSKD {
                         _this_ref.article_interface.show_article(state.md_src)
                         _this_ref.article_interface.content_panel_show()
                         _this_ref.article_interface.recommend_panel_show()
-                        _this_ref.article_interface.index_panel_show()
                     }, 250)
                     md_loaded = true
                 }
