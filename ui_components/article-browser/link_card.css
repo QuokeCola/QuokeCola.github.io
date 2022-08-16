@@ -48,6 +48,7 @@
 }
 
 .article-card-wrapper{
+    cursor: default;
     background-color: rgb(244,244,244);
     position: relative;
     transition: all cubic-bezier(.8, 0.0, 0.0, 1.0) .5s;

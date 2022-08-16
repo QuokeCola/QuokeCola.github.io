@@ -220,6 +220,7 @@ class ArticleBrowserIF {
         let _this_ref = this
         this._tag_wrapper.style.opacity = "0.0"
         setTimeout(function () {
+            _this_ref._tag_wrapper.style.display = "none"
             _this_ref._tag_wrapper.style.height = "0"
             _this_ref._tag_wrapper.style.pointerEvents = "none"
         }, 250);
@@ -229,6 +230,7 @@ class ArticleBrowserIF {
      * Animation will take 250ms
      */
     tag_panel_show() {
+        this._tag_wrapper.style.display = "block"
         this._tag_wrapper.style.height = "fit-content"
         this._tag_wrapper.style.opacity = "1.0"
         this._tag_wrapper.style.pointerEvents = "all"
