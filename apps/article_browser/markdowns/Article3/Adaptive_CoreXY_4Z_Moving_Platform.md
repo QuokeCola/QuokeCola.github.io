@@ -9,15 +9,15 @@ The design is adaptive, while it allows people to modify the size of the platfor
 
 As a moving platform it could also be applied as a laser cutting or CNC machine for soft materials (Like plastic).
 
-![Frame Overview](/apps/markdowns/Article3/FrameOverview.jpg "Frame Overview")
+![Frame Overview](/apps/article_browser/markdownsrowser/markdowns/Article3/FrameOverview.jpg "Frame Overview")
 <center>overview</center>
 
 The X carriage used is the tool changer system on E3D, so it can easily be modified as one 3D printer.
 
-![X Carriage](/apps/markdowns/Article3/ToolHead.jpg "X Carriage")
+![X Carriage](/apps/article_browser/markdownsrowser/markdowns/Article3/ToolHead.jpg "X Carriage")
 <center>X Carriage</center>
 
 As the tool head could move along Z axis, more tools could be mounted on this mounting panel.
 
-![Mounting Panel](/apps/markdowns/Article3/MountingPanel.jpg "Mounting Panel")
+![Mounting Panel](/apps/article_browser/markdownsrowser/markdowns/Article3/MountingPanel.jpg "Mounting Panel")
 <center>Mounting Panel</center>

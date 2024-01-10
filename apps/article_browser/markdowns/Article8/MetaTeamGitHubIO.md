@@ -6,4 +6,4 @@ Here is the [link](https://meta-team.github.io)
 
 Preview:
 
-![404 Error Page QwQ](/apps/markdowns/Article8/Loading.png)
+![404 Error Page QwQ](/apps/article_browser/markdownsrowser/markdowns/Article8/Loading.png)
