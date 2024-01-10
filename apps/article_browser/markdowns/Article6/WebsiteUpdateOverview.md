@@ -46,10 +46,10 @@ CSS file in `<body>` tag. In the future I will add the supports for reading CSS 
 For `type`, currently `introPage` and `contentPage` are supported. Most of the `introPage` use the template in `layout-intro.css` with banner image
 and chapters. `introPage` enables navigation bar's animation. `contentPage` will disable navigation bar's animation, and it will shrink on the top.
 
-![Intro page](/apps/article_browser/markdownsrowser/markdowns/Article6/Screen%20Shot%202021-12-16%20at%201.55.21%20PM.png)
+![Intro page](/apps/article_browser/markdowns/Article6/Screen%20Shot%202021-12-16%20at%201.55.21%20PM.png)
 <center>A typical intro page</center>
 
-![Intro page](/apps/article_browser/markdownsrowser/markdowns/Article6/Screen%20Shot%202021-12-16%20at%201.58.55%20PM.png)
+![Intro page](/apps/article_browser/markdowns/Article6/Screen%20Shot%202021-12-16%20at%201.58.55%20PM.png)
 <center>A typical content page</center>
 
 You can look at my written html, like `/src/home/home.html` and `/src/about/about.html` for reference.

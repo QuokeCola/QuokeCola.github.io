@@ -274,7 +274,7 @@ class ArticleBrowserIF {
             card_obj.classList.remove("article-card-loading")
         }
         link_img.classList.add("article-card-link-arrow")
-        link_img.src = "/framework/article_browser/right_arrow.svg"
+        link_img.src = "/apps/article_browser/right_arrow.svg"
 
         img.src = this._md_dir + "/" + article_list_object.pic
         img_wrapper.append(img);
