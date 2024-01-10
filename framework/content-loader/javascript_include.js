@@ -2,7 +2,7 @@ document.write("<script language=javascript src='/framework/common_function.js'>
 document.write("<script language=javaScript src='/apps/article_browser/article_browser_scheduler.js'></script>")
 class content_loader {
     static init(parsed_json) {
-        this.article_scheduler = new ArticleBrowserSKD('/apps/markdowns')
+        this.article_scheduler = new ArticleBrowserSKD('/apps/article_browser/markdowns')
 
         content_loader.content_window_obj = document.getElementById("content-screen");
         content_loader.loading_grid_obj = document.getElementById("loading-grid");
