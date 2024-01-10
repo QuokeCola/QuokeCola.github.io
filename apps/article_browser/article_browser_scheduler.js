@@ -1,4 +1,4 @@
-document.write("<script language=javascript src='/framework/article-browser/article_browser_interface.js'></script>")
+document.write("<script language=javascript src='/apps/article_browser/article_browser_interface.js'></script>")
 document.write("<script language=javascript src='/framework/common_function.js'></script>")
 
 class ArticleBrowserSKD {

@@ -9,7 +9,7 @@
     <link href="/framework/content-loader/css_include.css" rel="stylesheet" type="text/css">
     <link href="/framework/nav/css_include.css" rel="stylesheet" type="text/css">
 
-    <link href="/apps/htmls/home/css_include.css" rel="stylesheet" type="text/css">
+    <link href="/apps/home/css_include.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body style="margin: 0">
@@ -28,13 +28,13 @@
                 let onclick_event = new CustomEvent('loadContentRequest',
                             {detail:{web_info:{title: 'ARTICLES', src: '/ui_components/article-browser/index.html'},
                                      article_info: {tags: [], page: 1, md_src: 'Article10/SeniorDesign.md'}}});
-                document.dispatchEvent(onclick_event)">Learn More<img src="/apps/htmls/home/CornerArrow.svg"></div>
+                document.dispatchEvent(onclick_event)">Learn More<img src="/apps/home/linkArrow.svg"></div>
         </div>
-        <div class="home-banner-imgs" style="background-image: url('/apps/htmls/home/BannerImg.JPG')"></div>
+        <div class="home-banner-imgs" style="background-image: url('/apps/home/bannerImg.JPG')"></div>
     </div>
     <div class="home-section-wrapper" style="margin-top: 40px">
         <div id="home-selfIntro">
-            I am <span style="color: var(--accent-color);">Chen Qian,</span> an graduate student from UMich
+            I am <span style="color: var(--accent-color);">Chen Qian,</span> a graduate student from UMich
         </div>
         <div style="width: 100%"></div>
         <span class="home-div-line"></span>
@@ -85,7 +85,7 @@
             </table>
         </div>
         <div class="home-section-halfBlock" style="line-height: 0">
-            <img style="width: 100%; margin-top: auto" src="/apps/htmls/home/personalPhoto.jpeg">
+            <img style="width: 100%; margin-top: auto" src="/apps/home/personalPhoto.jpeg">
         </div>
     </div>
     <div class="home-section-wrapper">
@@ -96,27 +96,27 @@
                 <div class="home-div-line" id="home-showcase-line"></div>
                 <div style="width: 100%"></div>
                 <div class="home-link-button" style="margin-bottom: auto;"
-                onclick="javascript:window.open('https://github.com/QuokeCola/')">More<img src="/apps/htmls/home/CornerArrow.svg"></div>
+                onclick="javascript:window.open('https://github.com/QuokeCola/')">More<img src="/apps/home/linkArrow.svg"></div>
             </div>
             <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/ThermoCalculator')">
-                <div class="home-card-image" style="background-image: url('/apps/htmls/home/ThermalCalc.png')"></div>
+                <div class="home-card-image" style="background-image: url('/apps/home/thermalCalc.png')"></div>
                 <h1>Thermal Calculator</h1>
                 <p>A iOS application for calculating substance properties.</p>
-                <img class="home-card-link-arrow" src="/apps/htmls/home/linkArrow.svg">
+                <img class="home-card-link-arrow" src="/apps/home/linkArrow.svg">
             </div>
         </div>
         <div class="home-section-halfBlock" style="display: flex; flex-wrap: wrap">
             <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/Meta_Terminal_Rebuild')">
-                <div class="home-card-image" style="background-image: url('/apps/htmls/home/Terminal.png')"></div>
+                <div class="home-card-image" style="background-image: url('/apps/home/Terminal.png')"></div>
                 <h1>Meta Terminal 2</h1>
                 <p>Adjust vehicle PID parameters through a visualized terminal.</p>
-                <img class="home-card-link-arrow" src="/apps/htmls/home/linkArrow.svg">
+                <img class="home-card-link-arrow" src="/apps/home/linkArrow.svg">
             </div>
             <div class="home-card-wrapper" onclick="javascript:window.open('https://github.com/QuokeCola/Robomaster-PCBs')">
-                <div class="home-card-image" style="background-image: url('/apps/htmls/home/PCB.png')"></div>
+                <div class="home-card-image" style="background-image: url('/apps/home/PCB.png')"></div>
                 <h1>Robomaster PCBs</h1>
                 <p>PCB for ZJUI Robomaster team vehicles. </p>
-                <img class="home-card-link-arrow" src="/apps/htmls/home/linkArrow.svg">
+                <img class="home-card-link-arrow" src="/apps/home/linkArrow.svg">
             </div>
         </div>
     </div>

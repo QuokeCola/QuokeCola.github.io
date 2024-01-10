@@ -1,5 +1,5 @@
 document.write("<script language=javascript src='/framework/common_function.js'></script>")
-document.write("<script language=javaScript src='/framework/article-browser/article_browser_scheduler.js'></script>")
+document.write("<script language=javaScript src='/apps/article_browser/article_browser_scheduler.js'></script>")
 class content_loader {
     static init(parsed_json) {
         this.article_scheduler = new ArticleBrowserSKD('/apps/markdowns')

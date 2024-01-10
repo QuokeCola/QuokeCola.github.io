@@ -1,5 +1,5 @@
-document.write("<script language=javascript src='/framework/article-browser/marked.min.js'></script>");
-document.write("<script language=javascript src='/framework/article-browser/highlight.min.js'></script>");
+document.write("<script language=javascript src='/apps/article_browser/marked.min.js'></script>");
+document.write("<script language=javascript src='/apps/article_browser/highlight.min.js'></script>");
 
 
 class ArticleBrowserIF {
@@ -30,8 +30,7 @@ class ArticleBrowserIF {
 
         json_request.onload = function () {
             if (json_request.status === 200) {
-                let parsed_json = JSON.parse(json_request.responseText)
-                _this_ref.document_info = parsed_json
+                _this_ref.document_info = JSON.parse(json_request.responseText)
                 _this_ref.onload();
                 _this_ref._init_tag()
             }
@@ -275,7 +274,7 @@ class ArticleBrowserIF {
             card_obj.classList.remove("article-card-loading")
         }
         link_img.classList.add("article-card-link-arrow")
-        link_img.src = "/framework/article-browser/right_arrow.svg"
+        link_img.src = "/framework/article_browser/right_arrow.svg"
 
         img.src = this._md_dir + "/" + article_list_object.pic
         img_wrapper.append(img);

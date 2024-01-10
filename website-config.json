@@ -5,11 +5,11 @@
   "links": [
     {
       "title": "HOME",
-      "src": "/apps/htmls/home/home.html"
+      "src": "/apps/home/home.html"
     },
     {
       "title": "ARTICLES",
-      "src": "/framework/article-browser/index.html"
+      "src": "/apps/article-browser/index.html"
     }
   ]
 }

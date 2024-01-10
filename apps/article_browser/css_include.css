@@ -1,8 +1,8 @@
-@import "/framework/article-browser/side_panel.css";
-@import "/framework/article-browser/link_card.css";
-@import "/framework/article-browser/index_panel.css";
-@import "/framework/article-browser/highlight.min.css";
-@import "/framework/article-browser/md-custom.css";
+@import "/apps/article_browser/side_panel.css";
+@import "/apps/article_browser/link_card.css";
+@import "/apps/article_browser/index_panel.css";
+@import "/apps/article_browser/highlight.min.css";
+@import "/apps/article_browser/md-custom.css";
 @import "/framework/css_include.css";
 
 .article-banner {

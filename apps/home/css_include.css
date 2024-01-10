@@ -1,6 +1,6 @@
-@import "/apps/htmls/home/banner.css";
-@import "/apps/htmls/home/about.css";
-@import "/apps/htmls/home/showcase.css";
+@import "/apps/home/banner.css";
+@import "/apps/home/about.css";
+@import "/apps/home/showcase.css";
 @import "/framework/css_include.css";
 
 .home-section-wrapper{
