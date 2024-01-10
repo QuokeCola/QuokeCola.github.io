@@ -52,16 +52,16 @@ function sleep(d){
 
 function to_top() {
     let content_screent = document.getElementById("content-screen");
-    if(window.chrome === undefined) { // Safari
-        const scl2top = () => {
-            let sTop = content_screent.scrollTop;
-            if (sTop > 1) {
-                window.requestAnimationFrame(scl2top);
-                content_screent.scrollTo(0, sTop - sTop / 8);
-            }
-        }
-        window.requestAnimationFrame(scl2top);
-    } else {
+    // if(window.chrome === undefined) { // Safari
+    //     const scl2top = () => {
+    //         let sTop = content_screent.scrollTop;
+    //         if (sTop > 1) {
+    //             window.requestAnimationFrame(scl2top);
+    //             content_screent.scrollTo(0, sTop - sTop / 8);
+    //         }
+    //     }
+    //     window.requestAnimationFrame(scl2top);
+    // } else {
         content_screent.scrollTo(0,0);
-    }
+    // }
 }
